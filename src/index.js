@@ -8,15 +8,15 @@ const name = document.querySelector('#name');
 const generateButton = document.querySelector('#generate');
 const canvas = document.querySelector('#canvas');
 
-if (!link.value.trim()) {
-  alert('Please enter a link to generate QR code');
-}
-
-if (!name.value.trim()) {
-  alert('Please enter a name for the QR code');
-}
-
 generateButton.addEventListener('click', () => {
+  if (!link.value.trim()) {
+    alert('Please enter a link to generate QR code');
+  }
+
+  if (!name.value.trim()) {
+    alert('Please enter a name for the QR code');
+  }
+
   const qr = new QrCodeWithLogo({
     canvas,
     content: link.value.trim().replace("'", ''),
