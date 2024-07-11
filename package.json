@@ -20,6 +20,8 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "qrcode-with-logos": "^1.1.0"
   },
   "type": "module"
