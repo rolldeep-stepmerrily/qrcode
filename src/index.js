@@ -1,19 +1,27 @@
 import QrCodeWithLogo from 'qrcode-with-logos';
 import './css/reset.css';
 import './css/style.css';
-import LOGO from './assets/stepmerrily-logo.png';
+import LOGO from '../assets/stepmerrily-logo.png';
 
-const canvas = document.querySelector('#canvas');
-const url = document.querySelector('#url');
+const link = document.querySelector('#url');
 const name = document.querySelector('#name');
 const generateButton = document.querySelector('#generate');
+const canvas = document.querySelector('#canvas');
+
+if (!link.value.trim()) {
+  alert('Please enter a link to generate QR code');
+}
+
+if (!name.value.trim()) {
+  alert('Please enter a name for the QR code');
+}
 
 generateButton.addEventListener('click', () => {
   const qr = new QrCodeWithLogo({
     canvas,
-    content: url.value.trim().replace("'", ''),
+    content: link.value.trim().replace("'", ''),
     width: 380,
-    logo: { src: LOGO, borderWidth: 5 },
+    logo: { src: LOGO },
     nodeQrCodeOptions: {},
     cornersOptions: {},
     dotsOptions: {},
