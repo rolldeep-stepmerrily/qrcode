@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#generate {
+  margin-top: 20px;
+}
+
+#url,
+#name {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#canvas {
+  width: 300px;
+  height: 300px;
+}
+
+#image {
+  width: 300px;
+  height: 300px;
+}
