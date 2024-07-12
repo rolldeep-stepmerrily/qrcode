@@ -52,7 +52,7 @@ generateButton.addEventListener('click', async () => {
             resolve();
           });
         });
-      })
+      }),
     );
   });
 
